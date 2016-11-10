@@ -222,12 +222,12 @@ $(".jinrituijianyou").on("mouseout",function(){
 $(".jinrituijianzuo").on("mouseout",function(){
 	$(".jinrituijianzuo").css("background","url(images/jinrituijianzuo.png) no-repeat center")
 })
-//今日推荐===========================================================
+
 	$(".jinri2 dl").on("mouseover",function(){
-		$(this).stop().animate({"paddingTop":30},500)
+		$(this).stop().animate({"paddingTop":30},300)
 	})
 	$(".jinri2 dl").on("mouseout",function(){
-		$(this).stop().animate({"paddingTop":40},500)
+		$(this).stop().animate({"paddingTop":40},300)
 	})
 	$(".jinri2 a").on("mouseover",function(){
 		$(this).css("background","orange")
@@ -235,7 +235,7 @@ $(".jinrituijianzuo").on("mouseout",function(){
 	$(".jinri2 a").on("mouseout",function(){
 		$(this).css("background","#ff3b3c")
 	})
-	//main1======================================================================================
+	//main1================================================================
 	$(".main1 div").on("mouseover",function(){
 		$(this).stop().animate({"marginTop":-8},200).css("boxShadow", "0px 4px 8px rgba(0,0,0,.2)")
 	})

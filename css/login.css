@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
 
 /*login=============================================================*/
 .login{width: 100%;height: 525px;background:url(../images/loginbg.png) no-repeat center #f9f9f9;}
-.logindiv1{width: 338px;height: 525px;background: url(../images/logindiv1bg.png);float: left;margin-left: 198px;}
+.logindiv1{width: 338px;height: 525px;background: url(../images/logindiv1bg.png) no-repeat;float: left;margin-left: 198px;}
 .logindiv2{width: 424px;height: 525px;float: left;margin-left: 160px;position: relative;}
 .loginp1{font-size: 23px;margin: 46px 0 19px 119px;}
 .login input{width: 334px;height: 40px;border: 1px solid #cccccc;margin: 6px 0;border-radius: 4px;font-size: 14px;text-indent: 20px;}

@@ -1,4 +1,3 @@
-
 *{margin: 0;padding: 0;}
 ul,li,ol,dl{list-style: none;}
 a{text-decoration: none;}
@@ -24,7 +23,7 @@ h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
 
 /*login=============================================================*/
 .login{width: 100%;height: 525px;background:url(../images/loginbg.png) no-repeat center #f9f9f9;}
-.logindiv1{width: 338px;height: 525px;background: url(../images/logindiv1bg.png);float: left;margin-left: 198px;}
+.logindiv1{width: 338px;height: 525px;background: url(../images/logindiv1bg.png) no-repeat center;float: left;margin-left: 198px;}
 .logindiv2{width: 424px;height: 525px;float: left;margin-left: 160px;position: relative;}
 .loginp1{font-size: 23px;margin: 46px 0 19px 119px;}
 .login input{width: 334px;height: 40px;border: 1px solid #cccccc;margin: 6px 0;border-radius: 4px;font-size: 14px;text-indent: 20px;}
@@ -40,6 +39,14 @@ h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
 .wangjispan2 a{color: blue;float: left;font-size: 14px;}
 .wangjispan2 a:hover{color: black;}
 .chuyanzhengma{display: block;height: 20px;width: 64px;background: #C2C2C2;position: absolute;top: 273px;left: 243px;font-size: 14px;text-indent: 10px;}
+.zhanghaodiv{height: 40px;width: 182px;position: absolute;background:white;top: 100px;left: 344px;border-radius: 4px;border: 1px solid #cccccc;line-height: 40px;text-indent: 10px;font-size: 12px;display: none;}
+.mimadiv{height: 40px;width: 182px;position: absolute;background:white;top: 155px;left: 344px;border-radius: 4px;border: 1px solid #cccccc;line-height: 40px;text-indent: 10px;font-size: 12px;display: none;}
+.zaicimimadiv{height: 40px;width: 182px;position: absolute;background:white;top: 208px;left: 344px;border-radius: 4px;border: 1px solid #cccccc;line-height: 40px;text-indent: 10px;font-size: 12px;display: none;}
+.yanzhengmadiv{height: 40px;width: 182px;position: absolute;background:white;top: 263px;left: 344px;border-radius: 4px;border: 1px solid #cccccc;line-height: 40px;text-indent: 10px;font-size: 12px;display: none;}
+.jiao1{position: absolute;top: 113px;left: 336px;display: none;}
+.jiao2{position: absolute;top: 167px;left: 336px;display: none;}
+.jiao3{position: absolute;top: 220px;left: 336px;display: none;}
+.jiao4{position: absolute;top: 275px;left: 336px;display: none;}
 
 /*foot1=============================================================================*/
 .foot1{width: 1230px;height: 138px;}

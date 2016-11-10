@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
 .banner2{width: 100%;height: 197px;background: white;}
 .banner2 img{float: left;margin: 15px 0 0 10px;}
 
-/*今日推荐==================================================================================*/
+/*今日推荐===========================================================================*/
 .jinrituijian{width: 1230px;height: 41px;background: #f6f6f6;margin: 0 auto;}
 .jinri{width: 180px;height: 41px;background:url(../images/jinrituijianimg1.png) no-repeat 15px center #fc6628;font-size: 18px;line-height: 41px;color: white;text-indent: 50px;float: left;}
 .jinrituijianzuo{width: 34px;height: 22px;border: 1px solid #e1e1e1;background:url(../images/jinrituijianzuo.png) no-repeat center;float: left;margin:8px 0 0 959px;cursor: pointer;}
