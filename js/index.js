@@ -61,16 +61,16 @@ $(".xiliediv1,.xiliediv3").on("mouseout",function(){
 })
 
 var time;
-	var i=0;
+	var r=0;
 	clearInterval(time);
 	time = setInterval(function(){	
-		i++;
+		r++;
 		
-		if(i==8){
+		if(r==8){
 //			$(".navul2").css("marginTop",0)
-			i=0
+			r=0
 		}
-		$(".navul2").animate({"marginTop":-1*20*i});
+		$(".navul2").animate({"marginTop":-1*20*r});
 	},1500)
 //	function gundong(){
 //	timer = setInterval(function(){
