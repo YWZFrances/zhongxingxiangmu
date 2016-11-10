@@ -197,11 +197,11 @@ function gundong(){
 
 $(".bannerul1 li").on("mouseover",function(){
 	$(this).css("background","#BFBFBF")
-	$(this).children("div").css("display","block").stop().animate({"width":"222px"},500)
+	$(this).children("div").css("display","block").stop().animate({"width":"222px"},300)
 })
 $(".bannerul1 li").on("mouseout",function(){
 	$(this).css("background","white")
-	$(this).children("div").css("display","none").stop().animate({"width":"0"},500)
+	$(this).children("div").css("display","none").stop().animate({"width":"0"},300)
 })
 $(".banner2 img").on("mouseover",function(){
 	$(this).stop().animate({"height":"170px"},200)

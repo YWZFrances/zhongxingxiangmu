@@ -96,6 +96,12 @@ $(".loginp2").on("click",function(){
 			$(".jiao4").css("display","block")
 			$(this).css({"border":"1px solid #e5004f"})
 		}
+		if($("#txt4").val() == ""){
+			$(".yanzhengmadiv").html("验证码不许为空")
+			$(".yanzhengmadiv").css("display","block")
+			$(".jiao4").css("display","block")
+			$(this).css({"border":"1px solid #e5004f"})
+		}
 	})
 
 
