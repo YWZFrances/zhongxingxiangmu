@@ -65,7 +65,6 @@ var time;
 	clearInterval(time);
 	time = setInterval(function(){	
 		r++;
-		
 		if(r==8){
 //			$(".navul2").css("marginTop",0)
 			r=0
@@ -113,10 +112,31 @@ $(".leftbutton").on("mouseout",function(){
 $(".rightbutton").on("mouseout",function(){
 	$(".rightbutton").css({"opacity":0.4})
 })
-//$(".rightbutton").on("click",function(){
-//	clearInterval(timer)
-//	$(".lunboul1").animate({"left":1300},1000)
-//})
+var s = 1
+$(".rightbutton").on("click",function(){
+	clearInterval(timer)
+
+	
+	$(".lunboul1").animate({"left":-1263*s},1000,function(){
+		
+		s++
+		if(s==8){
+			s=1
+		}
+	})
+})
+var c = 8
+$(".leftbutton").on("click",function(){
+	clearInterval(timer)
+	
+	$(".lunboul1").animate({"left":-1263*(c-1)},1000,function(){
+		
+		c--
+		if(c==0){
+			c=8
+		}
+	})
+})
 var ul1 = document.getElementById("imgul");
 	var li = document.getElementById("navulid").children;
 	var index1 = 1// 第一张图片
