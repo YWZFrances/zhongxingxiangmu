@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
 .loginp2{height: 22px;line-height:22px;margin-left: 262px;width: 60px;}
 .loginp2 a{color: #767676;}
 .loginp2 a:hover{color: black;}
-.loginqita{height: 49px;background: url(../images/loginqita.png) no-repeat;}
+.loginqita{height: 49px;background: url(../images/loginqita.png) no-repeat;margin:20px 0 0 10px;}
 .qitatu img{float: left;margin-left: 27px;}
 .qitatu .qitatu1{margin-left: 86px;}
 .wangjimima{clear: both;line-height: 60px;height: 60px;}
