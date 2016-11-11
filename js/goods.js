@@ -60,17 +60,74 @@ $(".xiliediv1,.xiliediv3").on("mouseout",function(){
 })
 
 var time;
-	var i=0;
+	var r=0;
 	clearInterval(time);
 	time = setInterval(function(){	
-		i++;
-		
-		if(i==8){
-//			$(".navul2").css("marginTop",0)
-			i=0
+		r++;
+		if(r==7){
+			$(".navul2").css("marginTop",0)
+			r=0
 		}
-		$(".navul2").animate({"marginTop":-1*20*i});
-	},1500)
+		$(".navul2").animate({"marginTop":-1*20*r});
+	},2500)
+	
+	
+	//navp1============================================
+	$(".navp1").on("mouseover",function(){
+		$(".bannerleft").css("display","block")
+	})
+	$(".navp1").on("mouseout",function(){
+		$(".bannerleft").css("display","none")
+	})
+	
+$(".bannerleftdiv1").children().eq(1).css({"background":"url(../images/bannerleftdiv1img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv1").children().eq(2).css({"background":"url(../images/bannerleftdiv1img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv1").children().eq(3).css({"background":"url(../images/bannerleftdiv1img3.png) no-repeat 30px center"})
+	$(".bannerleftdiv1").children().eq(4).css({"background":"url(../images/bannerleftdiv1img4.png) no-repeat 30px center"})
+	$(".bannerleftdiv1").children().eq(5).css({"background":"url(../images/bannerleftdiv1img5.png) no-repeat 30px center"})
+	$(".bannerleftdiv1").children().eq(6).css({"background":"url(../images/bannerleftdiv1img6.png) no-repeat 30px center"})
+//}
+	
+	$(".bannerleftdiv2").children().eq(1).css({"background":"url(../images/bannerleftdiv2img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv2").children().eq(2).css({"background":"url(../images/bannerleftdiv2img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv2").children().eq(3).css({"background":"url(../images/bannerleftdiv2img3.png) no-repeat 30px center"})
+	$(".bannerleftdiv2").children().eq(4).css({"background":"url(../images/bannerleftdiv2img4.png) no-repeat 30px center"})
+	
+	$(".bannerleftdiv3").children().eq(1).css({"background":"url(../images/bannerleftdiv3img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv3").children().eq(2).css({"background":"url(../images/bannerleftdiv3img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv3").children().eq(3).css({"background":"url(../images/bannerleftdiv3img3.png) no-repeat 30px center"})
+	
+	$(".bannerleftdiv4").children().eq(1).css({"background":"url(../images/bannerleftdiv4img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv4").children().eq(2).css({"background":"url(../images/bannerleftdiv4img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv4").children().eq(3).css({"background":"url(../images/bannerleftdiv4img3.png) no-repeat 30px center"})
+	
+	$(".bannerleftdiv5").children().eq(1).css({"background":"url(../images/bannerleftdiv5img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv5").children().eq(2).css({"background":"url(../images/bannerleftdiv5img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv5").children().eq(3).css({"background":"url(../images/bannerleftdiv5img3.png) no-repeat 30px center"})
+	
+	$(".bannerleftdiv6").children().eq(1).css({"background":"url(../images/bannerleftdiv6img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv6").children().eq(2).css({"background":"url(../images/bannerleftdiv6img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv6").children().eq(3).css({"background":"url(../images/bannerleftdiv6img3.png) no-repeat 30px center"})
+	
+	$(".bannerleftdiv7").children().eq(1).css({"background":"url(../images/bannerleftdiv7img1.png) no-repeat 30px center"})
+	$(".bannerleftdiv7").children().eq(2).css({"background":"url(../images/bannerleftdiv7img2.png) no-repeat 30px center"})
+	$(".bannerleftdiv7").children().eq(3).css({"background":"url(../images/bannerleftdiv7img3.png) no-repeat 30px center"})
+
+
+$(".bannerul1 li").on("mouseover",function(){
+	$(this).css("background","#BFBFBF")
+	$(this).children("div").css("display","block").stop().animate({"width":"222px"},300)
+})
+$(".bannerul1 li").on("mouseout",function(){
+	$(this).css("background","#adeaff")
+	$(this).children("div").css("display","none").stop().animate({"width":"0"},300)
+})
+$(".banner2 img").on("mouseover",function(){
+	$(this).stop().animate({"height":"170px"},200)
+})
+$(".banner2 img").on("mouseout",function(){
+	$(this).stop().animate({"height":"163px"},200)
+})
 	
 	
 	

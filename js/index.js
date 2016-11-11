@@ -65,12 +65,12 @@ var time;
 	clearInterval(time);
 	time = setInterval(function(){	
 		r++;
-		if(r==8){
-//			$(".navul2").css("marginTop",0)
+		if(r==7){
+			$(".navul2").css("marginTop",0)
 			r=0
 		}
 		$(".navul2").animate({"marginTop":-1*20*r});
-	},1500)
+	},2500)
 //	function gundong(){
 //	timer = setInterval(function(){
 //		if(!flag){
@@ -115,28 +115,36 @@ $(".rightbutton").on("mouseout",function(){
 var s = 1
 $(".rightbutton").on("click",function(){
 	clearInterval(timer)
-
-	
 	$(".lunboul1").animate({"left":-1263*s},1000,function(){
-		
 		s++
-		if(s==8){
+		if(s==9){
+			$(".lunboul1").css("left","0")
 			s=1
+			
 		}
 	})
 })
-var c = 8
-$(".leftbutton").on("click",function(){
-	clearInterval(timer)
-	
-	$(".lunboul1").animate({"left":-1263*(c-1)},1000,function(){
-		
-		c--
-		if(c==0){
-			c=8
-		}
-	})
-})
+//$(".leftbutton").on("click",function(){
+//	
+//	clearInterval(timer)
+//if(s==0){
+//	$(".lunboul1").css("left","-10109px")
+//	
+//}
+//$(".lunboul1").animate({"left":1263*s},1000,function(){
+//	s++
+//})
+
+//	$(".lunboul1").animate({"left":1263*(c)},1000,function(){
+//		
+//		if(c==0){
+//	
+//			$(".lunboul1").css("left","-10112px")
+//			c=9
+//		}
+//		c++
+//	})
+//})
 var ul1 = document.getElementById("imgul");
 	var li = document.getElementById("navulid").children;
 	var index1 = 1// 第一张图片
