@@ -141,12 +141,48 @@ $(document).ready(function() {
 			flag4 = false
 		}
 	})
+	
+	
 	$("#lijizhuce").on("click", function() {
+		var nameUser = $("#txt1").val();
+		var passUser = $("#txt2").val();
 		if(flag1) {
 			if(flag2) {
 				if(flag3) {
 					if(flag4) {
-						location.replace("login.html")
+						var strCookie=document.cookie;
+						var arrCookie=strCookie.split("; ");
+						//出來的是一組一組的鍵值對
+						//还需要分割
+						for(var i=0;i<arrCookie.length;i++){
+						             var arr=arrCookie[i].split("=");
+						             if(arr[0]==$("#txt1").val()){
+						             	alert("用户名已被注册")
+						             	break;
+						             }
+						             if(arr[0]!=$("#txt1").val()){
+						             	location.replace("login.html")
+						             }     	     
+						}
+						
+
+//						var str = document.cookie.split(";")
+//						var newstr = str.split(",")
+//							console.log(str)
+//						var str = document.cookie;	
+//						var arrcookie = str.split(";");	
+//						var userid;
+//						var username;
+//						var arr = arrcookie[1].split("=");
+//						userid= arr[1];	
+//						arr = arrcookie[1].split("=");	
+//						username=arr[1];	
+						
+						
+						cookieUtil.setCookie(nameUser,passUser,30);
+					    var cookieValue=cookieUtil.getCookieValue(nameUser);
+					    var cookieName = cookieUtil.getCookieName(nameUser);
+//					    alert(cookieName)
 					} else {
 						alert("请输入正确的信息")
 					}

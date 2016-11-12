@@ -7,6 +7,7 @@
 		<link rel="icon" href="../titlelogo.png" type="image/x-icon" />
 		<script src="../js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookieUtil.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../css/login.css" />
 		<link rel="stylesheet" type="text/css" href="../css/css.css" />
 	</head>
@@ -50,14 +51,14 @@
 			<div class="logindiv2">
 				<p class="loginp1">欢迎登录</p>
 				<form action="">
-					<input type="text" class="yonghu" name="" id="" value="" placeholder="手机号 / 邮箱 / 用户名" />
-					<input type="password" class="mima" name="" id="" value="" placeholder="密码" />
-					<input type="text" class="yanzhengma" name="" id="" value="" placeholder="验证码" />
+					<input id="txt1" type="text" class="yonghu" name="" id="" value="" placeholder="手机号 / 邮箱 / 用户名" />
+					<input id="txt2" type="password" class="mima" name="" id="" value="" placeholder="密码" />
+					<input id="txt3" type="text" class="yanzhengma" name="" id="" value="" placeholder="验证码" />
 					<span class="chuyanzhengma">6373</span>
 					<p class="loginp2">
 						<a href="###">更换验证码</a>
 					</p>
-					<input type="button" class="denglu" name="" id="" value="登录" />
+					<input type="button" class="denglu" name="" id="denglu" value="登录" />
 				</form>
 				<div class="loginqita"></div>
 				<div class="qitatu">
@@ -69,6 +70,14 @@
 					<span class="wangjispan1"><a href="register.html">立即注册</a></span>
 					<span class="wangjispan2"><a href="">忘记密码?</a></span>
 				</div>
+				<div class="zhanghaodiv"></div>
+				<div class="mimadiv"></div>
+				<div class="zaicimimadiv"></div>
+				<div class="yanzhengmadiv"></div>
+				<img class="jiao1" src="../images/registerjiao.png" />
+				<img class="jiao2" src="../images/registerjiao.png" />
+				<img class="jiao3" src="../images/registerjiao.png" />
+				<img class="jiao4" src="../images/registerjiao.png" />
 			</div>
 		</div>
 		<!--foot1=============================================================-->
