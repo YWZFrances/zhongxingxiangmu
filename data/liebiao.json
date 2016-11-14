@@ -4,16 +4,32 @@
 		"name": "[现货抢购]ZET中兴 天机7 MAX(全网通)",
 		"price": "￥2999"
 	}, {
-		"img": 1,
-		"name": "[现货抢购]ZET中兴 天机7 MAX(全网通)",
-		"price": "￥2999"
+		"img": 2,
+		"name": "ZTE中兴 天机7 A2017(全网通)",
+		"price": "￥3099"
 	}, {
-		"img": 1,
-		"name": "[现货抢购]ZET中兴 天机7 MAX(全网通)",
-		"price": "￥2999"
+		"img": 3,
+		"name": "ZTE中兴 天机7 A2017(全网通)斯坦灰/全网通/4GB+64GB",
+		"price": "￥3099"
 	}, {
-		"img": 1,
-		"name": "[现货抢购]ZET中兴 天机7 MAX(全网通)",
-		"price": "￥2999"
+		"img": 4,
+		"name": "ZTE中兴 小鲜4 4G全网通（BV0701）",
+		"price": "￥1090"
+	},{
+		"img": 5,
+		"name": "ZTE中兴 Blade A2 Plus 全网通",
+		"price": "￥899"
+	}, {
+		"img": 6,
+		"name": "ZTE中兴 V7 MAX",
+		"price": "￥1799"
+	}, {
+		"img": 7,
+		"name": "ZTE中兴 AXON天机 MAX C2016 压力屏(4G全网通)",
+		"price": "￥2799"
+	}, {
+		"img": 8,
+		"name": "ZTE中兴 Blade A2 国民指纹手机  双卡双待",
+		"price": "￥699"
 	}
 ]

@@ -164,21 +164,6 @@ $(document).ready(function() {
 						             	location.replace("login.html")
 						             }     	     
 						}
-						
-
-//						var str = document.cookie.split(";")
-//						var newstr = str.split(",")
-//							console.log(str)
-//						var str = document.cookie;	
-//						var arrcookie = str.split(";");	
-//						var userid;
-//						var username;
-//						var arr = arrcookie[1].split("=");
-//						userid= arr[1];	
-//						arr = arrcookie[1].split("=");	
-//						username=arr[1];	
-						
-						
 						cookieUtil.setCookie(nameUser,passUser,30);
 					    var cookieValue=cookieUtil.getCookieValue(nameUser);
 					    var cookieName = cookieUtil.getCookieName(nameUser);

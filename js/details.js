@@ -206,67 +206,84 @@ $(document).ready(function() {
 		}, 200)
 	})
 
-	//<div class="liebiaocontent">
-	//				<dl>
-	//					<dt><img src="../images/goodscontentimg1.png"/></dt>
-	//					<dd>[现货抢购]ZET中兴 天机7 MAX(全网通)</dd>
-	//					<dd class="ddred">￥2999</dd>
-	//				</dl>
-	//			</div>
-
-	//data
-	var newStr = "";
-	$.ajax("../data/liebiao.json", {
-		success: function(data) {
-			for(var j = 0; j < data.length; j++) {
-				reloadHtml(data[j].img, data[j].name, data[j].price)
-			}
-		},
-		type: "get",
-		async: true
-	});
-
-	function reloadHtml(img, name, price) {
-		//		newStr += "<div class = 'liebiaocontent'>"
-		//		newStr += "<dl>"
-		//		newStr += "<dt>"
-		//		newStr += "<img src = '../images/goodscontentimg" + img + ".png' />"
-		//		newStr += "</dt>"
-		//		newStr += "<dd>" + name + "</dd>"
-		//		newStr += "<dd class ='ddred'>" + price + "</dd>"
-		//		newStr += "</dl>"
-		//		newStr += "</div>"
-		//		$(".liebiao").html(newStr)
-		newStr += "<div class = 'liebiaocontent'>" +
-			"<dl>" +
-			"<dt>" +
-			"<img src = '../images/goodscontentimg" + img + ".png' />" +
-			"</dt>" +
-			"<dd>" + name + "</dd>" +
-			"<dd class ='ddred'>" + price + "</dd>" +
-			"</dl>" +
-			"</div>"
-		$(".liebiao").html(newStr)
-		$(".liebiaocontent").on("mouseover", function() {
-			$(this).stop().animate({
-				"margin-top": "2px"
-			}, 200).css("boxShadow", "0px 4px 8px rgba(0,0,0,.2)")
-		})
-		$(".liebiaocontent").on("mouseout", function() {
-			$(this).stop().animate({
-				"margin-top": "12px"
-			}, 200).css("boxShadow", "none")
-		})
-		$(".liebiaocontent").on("click", function() {
-		location.replace("details.html")
+//放大镜==================================================
+	$(".touming").on("mouseover", function() {
+		$(".fangdajingda").css("display", "block")
+	})
+	$(".touming").on("mouseout", function() {
+		$(".fangdajingda").css("display", "none")
 	})
 
-	}
-
-	//div上升
-	//	$(".liebiaocontent").on("mouseover", function(){
-	//		alert(2)
-	//	})
+	var minImgWidth = 400
+	var maxImgWidth = 800
+	$(".touming").on("mousemove", function(e) {
+		var left = e.offsetX - $(".xiao").width() / 2;
+		var top = e.offsetY - $(".xiao").height() / 2;
+		left = Math.max(0, Math.min($(".touming").width() - $(".xiao").width(), left));
+		top = Math.max(0, Math.min($(".touming").height() - $(".xiao").height(), top));
+		$(".xiao").css("left", left)
+		$(".xiao").css("top", top)
+		var imgLeft = Math.floor(e.offsetX / minImgWidth * maxImgWidth);
+		var imgTop = Math.floor(e.offsetY / minImgWidth * maxImgWidth);
+		var imgMarLeft = parseInt(-imgLeft + $(".fangdajingda").width() / 2);
+		var imgMarTop = parseInt(-imgTop + $(".fangdajingda").height() / 2);
+		$(".fangdajingdatu").css("margin-left", imgMarLeft)
+		$(".fangdajingdatu").css("margin-top", imgMarTop)
+	})
+	//放大镜下面切换图===================================================
+	$(".xiao1").on("click", function() {
+		//		.fangdajingxiaotu2{display: none;}
+		//.fangdajingdatu2{display: none;}
+		$(".chushibiankuang").css("border","1px solid #fc6628")
+		$(".chushiwubiankuang").css("border","none")
+		$(".fangdajingxiaotu2").css("display","none")
+		$(".fangdajingdatu2").css("display","none")
+		$(".fangdajingxiaotu1").css("display","block")
+		$(".fangdajingdatu1").css("display","block")
+	})
+	$(".xiao2").on("click", function() {
+		//		.fangdajingxiaotu2{display: none;}
+		//.fangdajingdatu2{display: none;}
+		$(".chushiwubiankuang").css("border","1px solid #fc6628")
+		$(".chushibiankuang").css("border","none")
+		$(".fangdajingxiaotu1").css("display","none")
+		$(".fangdajingdatu1").css("display","none")
+		$(".fangdajingxiaotu2").css("display","block")
+		$(".fangdajingdatu2").css("display","block")
+	})
 	
-
+	
+	$(".saomagoumai").on("mouseover",function(){
+//		alert(2)
+$(".xiangqingerweima").css("display","block")
+	})
+	
+	$(".saomagoumai").on("mouseout",function(){
+//		alert(2)
+$(".xiangqingerweima").css("display","none")
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 })

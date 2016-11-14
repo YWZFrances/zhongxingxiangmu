@@ -54,10 +54,11 @@ $(document).ready(function() {
 		//cookie有 写得有 密码对 验证码对 登录了
 		//	alert(2)
 		var strCookie = document.cookie;
-		var arrCookie = strCookie.split("; ");
+		var arrCookie = strCookie.split("; ");	
 		for(var i = 0; i < arrCookie.length; i++) {
 			var arr = arrCookie[i].split("=");
 			console.log(arr)
+//alert(arr)
 			if(arr[0] == $("#txt1").val()) {
 				if(arr[1] == $("#txt2").val()  && $("#txt3").val() == $(".chuyanzhengma").text()) {
 
@@ -68,26 +69,18 @@ $(document).ready(function() {
 					alert("请输入正确的验证码")
 				}
 			}
-			//				else{
-			//					alert(2)
-			//				}
 			if(arr[0] == $("#txt1").val()) {
 				if(arr[1] != $("#txt2").val()) {
 					alert("密码错误")
 				}
 			}
-			//	            if(arr[0]!=$("#txt1").val()){
-			//	            //用户不存在
-			//	            alert("用户名不存在");
-			//	            break;
-			//	            }
-			//	            if(arr[0])
+//			var obj = arr[0]
+			
+//			for(var k = 0;k<obj.length;k++){
+//				
+//			}
+			
 		}
-
-		//			if(arr[0]!=$("#txt1").val()){
-		//				alert(2)
-		//			}
-		//			alert(arr)
 
 	})
 
