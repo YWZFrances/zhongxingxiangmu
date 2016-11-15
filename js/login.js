@@ -53,7 +53,13 @@ $(document).ready(function() {
 		//cookie有 写得有 密码错 请输入正确的密码
 		//cookie有 写得有 密码对 验证码对 登录了
 		//	alert(2)
+//		var yonghuming = $("#txt1").val()
 		var strCookie = document.cookie;
+//		var bucunzai = cookieUtil.getCookieName("13111111122")
+//		if(bucunzai == null){
+//			alert(2)
+//		}
+//alert(bucunzai)
 		var arrCookie = strCookie.split("; ");	
 		for(var i = 0; i < arrCookie.length; i++) {
 			var arr = arrCookie[i].split("=");

@@ -266,6 +266,19 @@ $(".xiangqingerweima").css("display","none")
 	
 	
 	
+	$(".jiarugouwuche").on("click",function(){
+		var img = $(".xiao1").attr("src")
+//		alert(img)
+		var name = $(".mingcheng").html()
+		var price = $(".p3span").html()
+		var count = 1
+		var strShopping	= img+"&&"+name+"&&"+price+"&&"+count+"&&"+count*price
+		cookieUtil.setCookie("shopping",strShopping,30)
+//		alert(strShopping)
+		location.replace("shoppingcart.html")
+	})
+	
+	
 	
 	
 	

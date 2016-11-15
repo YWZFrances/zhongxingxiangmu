@@ -253,7 +253,7 @@ strong {
 	height: 0px;
 	position: absolute;
 	background: white;
-	z-index: 111;
+	z-index: 99999111;
 	left: 0px;
 	overflow: hidden;
 	opacity: .95;
@@ -266,7 +266,7 @@ strong {
 	background: white;
 	;
 	left: 0px;
-	z-index: 111;
+	z-index: 99999111;
 	opacity: .95;
 	overflow: hidden;
 }
@@ -326,7 +326,7 @@ strong {
 	width: 236px;
 	height: 491px;
 	position: absolute;
-	z-index: 11;
+	z-index: 99999111;
 	background: #adeaff;
 	opacity: .9;
 	top: 178px;
