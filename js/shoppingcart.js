@@ -83,18 +83,22 @@ $(document).ready(function() {
 //		}
 
 		var arr = cookieUtil.getCookieValue("shopping")
-		gouwuche()
+		gouwuche();
 		$(".jian").on("click",function(){
-						gouwuche()
+				
+						changeValuejian();
 					})
 		$(".jia").on("click",function(){
-						gouwuche()
+						changeValue();
 					})
-		$(".shanchu").on("click",function(){
-						cookieUtil.removeCookie("shopping")
-						location.replace("shoppingcart.html")
-					})
+//		$(".shanchu").on("click",function(){
+//						cookieUtil.removeCookie("shopping")
+//						location.replace("shoppingcart.html")
+//					})
 //		alert(arr)
+
+
+//cookie -》 data   遍历data 生成DOM
 function gouwuche(){
 	for(var i=0;i<arr.length;i++){
 				
@@ -111,13 +115,33 @@ function gouwuche(){
 //					str += "<div class = ''><img src ='"+imgSrc+"'><div/>"
 					str += "<div class = 'shangpinmingcheng2'><img src = '"+imgSrc+"'>"+name+"</div>"
 					str += "<div class = 'chengjiaojia2'>"+price+"</div>"
-					str += "<div class = 'shuliang2'><input class='jian' type='button' name='' id='' value='-' />"+count+"<input class='jia' type='button' name='' id='' value='+' /></div>"
+					str += "<div class = 'shuliang2'><input class='jian' type='button' name='' id='' value='-' /><span class = 'shuliang2span'>"+count+"</span><input class='jia' type='button' name='' id='' value='+' /></div>"
 					
 					str += "<div class = 'xiaoji2'>"+price*count+"</div>"
 					str += "<div class = 'caozuo2'><input class='shanchu' type='button' name='' id='' value='删除' /></div>"
 		$(".ziliao").html(str)
 		
 		}
+	
+}
+function changeValue(){
+	var num = $(".shuliang2span").html()
+	var price = $(".chengjiaojia2").html()
+	num++
+	var total = price*num;
+	$(".xiaoji2").html(total);
+	$(".shuliang2span").html(num)
+}
+function changeValuejian(){
+	var num = $(".shuliang2span").html()
+	var price = $(".chengjiaojia2").html()
+	num--
+	if(num <= 0){
+		num =0
+	}
+	var total = price*num;
+	$(".xiaoji2").html(total);
+	$(".shuliang2span").html(num)
 }
 			
 

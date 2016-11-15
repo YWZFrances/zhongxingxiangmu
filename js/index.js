@@ -39,6 +39,10 @@ $(document).ready(function(){
 		$(".gouwuchediv").css("display","none")
 	})
 	
+	$(".gouwuche").on("click",function(){
+		location.replace("html/shoppingcart.html")
+	})
+	
 //	nav=================================================================
 $(".navdiv1").on("mouseover",function(){
 	$(".xilie").stop().animate({"height":238},300)
