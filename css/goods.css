@@ -517,6 +517,7 @@ strong {
 /*列表=========================================================*/
 .liebiao{width: 1230px;height: 1080px;/*background: green ;*/margin: 0 auto;}
 .liebiaocontent{width: 296px;height: 348px;background: white ;float: left;margin-right: 9px;border: 1px solid #dddddd;margin-top: 12px;text-align: center;cursor: pointer;}
+.dong{-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);box-shadow: 0px 15px 30px rgba(0,0,0,0.1);-webkit-transform: translate3d(0, -2px, 0);transform: translate3d(0px, -2px, 0);z-index: 1;transition: all 0.2s linear;}
 .liebiaocontent img{margin:50px 0 30px 0;}
 .liebiaocontent dd{font-size: 14px;}
 .liebiaocontent .ddred{line-height: 43px;color: #fc6822;}

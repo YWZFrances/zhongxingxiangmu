@@ -29,22 +29,24 @@ $(document).ready(function() {
 	//	head====================================================================
 
 	//	logo=================================================================
-	$(".gouwuche").on("mouseover", function() {
-		$(".gouwuche").css({
-			"background": "url(../images/gouwucheimg2.png) no-repeat 31px center white",
-			"color": "black",
-			"border-bottom": "white"
-		})
-		$(".gouwuchediv").css("display", "block")
+//	$(".gouwuche").on("mouseover", function() {
+//		$(".gouwuche").css({
+//			"background": "url(../images/gouwucheimg2.png) no-repeat 31px center white",
+//			"color": "black",
+//			"border-bottom": "white"
+//		})
+//		$(".gouwuchediv").css("display", "block")
+//	})
+//	$(".gouwuche").on("mouseout", function() {
+//		$(".gouwuche").css({
+//			"background": "url(../images/gouwuche.png) no-repeat 31px center #f9c81d",
+//			"color": "#767676",
+//		})
+//		$(".gouwuchediv").css("display", "none")
+//	})
+$(".gouwuche").on("click",function(){
+		location.replace("shoppingcart.html")
 	})
-	$(".gouwuche").on("mouseout", function() {
-		$(".gouwuche").css({
-			"background": "url(../images/gouwuche.png) no-repeat 31px center #f9c81d",
-			"color": "#767676",
-		})
-		$(".gouwuchediv").css("display", "none")
-	})
-
 	//	nav=================================================================
 	$(".navdiv1").on("mouseover", function() {
 		$(".xilie").stop().animate({
@@ -247,15 +249,27 @@ $(document).ready(function() {
 			"</dl>" +
 			"</div>"
 		$(".liebiao").html(newStr)
-		$(".liebiaocontent").on("mouseover", function() {
-			$(this).stop().animate({
-				"margin-top": "2px"
-			}, 200).css("boxShadow", "0px 4px 8px rgba(0,0,0,.2)")
+//		$(".liebiaocontent").on("mouseover", function() {
+//			$(this).stop().animate({
+//				"margin-top": "2px"
+//			}, 200).css("boxShadow", "0px 4px 8px rgba(0,0,0,.2)")
+//		})
+//		$(".liebiaocontent").on("mouseout", function() {
+//			$(this).stop().animate({
+//				"margin-top": "12px"
+//			}, 200).css("boxShadow", "none")
+//		})
+//		$(".liebiaocontent").css({"-webkit-box-shadow": "0 15px 30px rgba(0,0,0,0.1)",
+//  "box-shadow": "0px 15px 30px rgba(0,0,0,0.1)",
+//  "-webkit-transform":" translate3d(0, -2px, 0)",
+// " transform": "translate3d(0px, -2px, 0)",
+//  "z-index": "1",
+//  "transition": "all 0.2s linear"})
+		$(".liebiaocontent").on("mouseover",function(){
+			$(this).addClass("dong")
 		})
-		$(".liebiaocontent").on("mouseout", function() {
-			$(this).stop().animate({
-				"margin-top": "12px"
-			}, 200).css("boxShadow", "none")
+		$(".liebiaocontent").on("mouseout",function(){
+			$(this).removeClass("dong")
 		})
 		$(".liebiaocontent").on("click", function() {
 		location.replace("details.html")

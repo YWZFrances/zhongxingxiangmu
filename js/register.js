@@ -161,10 +161,10 @@ $(document).ready(function() {
 						             	break;
 						             }
 						             if(arr[0]!=$("#txt1").val()){
-						             	location.replace("login.html")
+						             	window.location.href="login.html"
 						             }     	     
 						}
-						cookieUtil.setCookie(nameUser,passUser,30);
+						cookieUtil.setCookie(nameUser,passUser,30,"/");
 					    var cookieValue=cookieUtil.getCookieValue(nameUser);
 					    var cookieName = cookieUtil.getCookieName(nameUser);
 //					    alert(cookieName)

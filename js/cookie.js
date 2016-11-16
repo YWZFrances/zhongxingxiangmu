@@ -5,8 +5,12 @@ var cookieUtil={
     setCookie:function (name,value,days){
         var date=new Date();
         date.setDate(date.getDate()+days);
-        document.cookie=name+"="+encodeURIComponent(value)+";expires="+date;
+        document.cookie=name+"="+encodeURIComponent(value)+"; path=/;expires="+date;
     },
+    
+    
+    
+//  document.cookie=phone1+"="+encodeURIComponent(value)+"; path=/; expires="+d.toGMTString();
     getCookieValue: function (name){
             var cookieValue="";
             

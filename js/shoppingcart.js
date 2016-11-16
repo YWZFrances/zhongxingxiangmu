@@ -91,10 +91,10 @@ $(document).ready(function() {
 		$(".jia").on("click",function(){
 						changeValue();
 					})
-//		$(".shanchu").on("click",function(){
-//						cookieUtil.removeCookie("shopping")
-//						location.replace("shoppingcart.html")
-//					})
+		$(".shanchu").on("click",function(){
+						cookieUtil.removeCookie("shopping")
+						location.replace("shoppingcart.html")
+					})
 //		alert(arr)
 
 
@@ -118,7 +118,7 @@ function gouwuche(){
 					str += "<div class = 'shuliang2'><input class='jian' type='button' name='' id='' value='-' /><span class = 'shuliang2span'>"+count+"</span><input class='jia' type='button' name='' id='' value='+' /></div>"
 					
 					str += "<div class = 'xiaoji2'>"+price*count+"</div>"
-					str += "<div class = 'caozuo2'><input class='shanchu' type='button' name='' id='' value='删除' /></div>"
+					str += "<div class = 'caozuo2'><input class='shanchu' type='button' name='' id='' value='清空购物车' /></div>"
 		$(".ziliao").html(str)
 		
 		}

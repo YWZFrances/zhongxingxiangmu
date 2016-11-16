@@ -29,20 +29,23 @@ $(document).ready(function() {
 	//	head====================================================================
 
 	//	logo=================================================================
-	$(".gouwuche").on("mouseover", function() {
-		$(".gouwuche").css({
-			"background": "url(../images/gouwucheimg2.png) no-repeat 31px center white",
-			"color": "black",
-			"border-bottom": "white"
-		})
-		$(".gouwuchediv").css("display", "block")
-	})
-	$(".gouwuche").on("mouseout", function() {
-		$(".gouwuche").css({
-			"background": "url(../images/gouwuche.png) no-repeat 31px center #f9c81d",
-			"color": "#767676",
-		})
-		$(".gouwuchediv").css("display", "none")
+//	$(".gouwuche").on("mouseover", function() {
+//		$(".gouwuche").css({
+//			"background": "url(../images/gouwucheimg2.png) no-repeat 31px center white",
+//			"color": "black",
+//			"border-bottom": "white"
+//		})
+//		$(".gouwuchediv").css("display", "block")
+//	})
+//	$(".gouwuche").on("mouseout", function() {
+//		$(".gouwuche").css({
+//			"background": "url(../images/gouwuche.png) no-repeat 31px center #f9c81d",
+//			"color": "#767676",
+//		})
+//		$(".gouwuchediv").css("display", "none")
+//	})
+$(".gouwuche").on("click",function(){
+		location.replace("shoppingcart.html")
 	})
 
 	//	nav=================================================================
@@ -213,20 +216,30 @@ $(document).ready(function() {
 	$(".touming").on("mouseout", function() {
 		$(".fangdajingda").css("display", "none")
 	})
-
+//小图的大小
 	var minImgWidth = 400
+	//大图的大小
 	var maxImgWidth = 800
+	//在透明div上鼠标移动 传一个e
 	$(".touming").on("mousemove", function(e) {
+//		横纵坐标 让鼠标处在小div的中心
 		var left = e.offsetX - $(".xiao").width() / 2;
 		var top = e.offsetY - $(".xiao").height() / 2;
+		//设置小div的边界值
 		left = Math.max(0, Math.min($(".touming").width() - $(".xiao").width(), left));
 		top = Math.max(0, Math.min($(".touming").height() - $(".xiao").height(), top));
+		//然后让小div的css的left和top变化
 		$(".xiao").css("left", left)
 		$(".xiao").css("top", top)
+		//鼠标移动的时候，变化大图的margin-left和margin-top值，这样大图就能动起来了
+		//按比例算算在鼠标在小图上是什么位置，到了大图上应该在什么位置
 		var imgLeft = Math.floor(e.offsetX / minImgWidth * maxImgWidth);
 		var imgTop = Math.floor(e.offsetY / minImgWidth * maxImgWidth);
+		//这里我也有点迷糊，因为放大图的容器是比大图小的，所以肯定放不下，所以就让一部分显示在容器里，就控制图片的margin让它在容器里显示
+		//你鼠标右滑 对应的是大图向左挪动，所以下面的imgLeft是负的 imgTop同理
 		var imgMarLeft = parseInt(-imgLeft + $(".fangdajingda").width() / 2);
 		var imgMarTop = parseInt(-imgTop + $(".fangdajingda").height() / 2);
+		//然后让大图的css的margin变化
 		$(".fangdajingdatu").css("margin-left", imgMarLeft)
 		$(".fangdajingdatu").css("margin-top", imgMarTop)
 	})

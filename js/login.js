@@ -53,40 +53,58 @@ $(document).ready(function() {
 		//cookie有 写得有 密码错 请输入正确的密码
 		//cookie有 写得有 密码对 验证码对 登录了
 		//	alert(2)
-//		var yonghuming = $("#txt1").val()
+		
+		
+//		console.log(yonghuming)
 		var strCookie = document.cookie;
-//		var bucunzai = cookieUtil.getCookieName("13111111122")
-//		if(bucunzai == null){
-//			alert(2)
+		var yonghuming = $("#txt1").val()
+		
+//		var bucunzai = $.cookie("yonghuming")
+//		var bucunzai = cookieUtil.getCookieName(yonghuming)
+//		alert(bucunzai)
+//		if(bucunzai == undefined){
+//			alert("用户不存在")
 //		}
-//alert(bucunzai)
+//console.log(bucunzai)
 		var arrCookie = strCookie.split("; ");	
 		for(var i = 0; i < arrCookie.length; i++) {
+			var flag1 = false
+		var flag2 = false
+		var flag3 = false
 			var arr = arrCookie[i].split("=");
-			console.log(arr)
+//			console.log(arr)
 //alert(arr)
 			if(arr[0] == $("#txt1").val()) {
 				if(arr[1] == $("#txt2").val()  && $("#txt3").val() == $(".chuyanzhengma").text()) {
-
-					location.replace("../index.html")
+					flag2 = true
+				cookieUtil.setCookie("userlogin", yonghuming, 365,"/");
+					window.location.href="../index.html"
 
 				} 
 				if($("#txt3").val() != $(".chuyanzhengma").text()){
 					alert("请输入正确的验证码")
+				}else{
+					flag1 = true
 				}
 			}
 			if(arr[0] == $("#txt1").val()) {
 				if(arr[1] != $("#txt2").val()) {
 					alert("密码错误")
+				}else{
+					flag3 = true
 				}
 			}
+			
 //			var obj = arr[0]
 			
 //			for(var k = 0;k<obj.length;k++){
 //				
 //			}
 			
+			
+			
 		}
+		
 
 	})
 
