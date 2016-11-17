@@ -462,7 +462,7 @@ $(document).ready(function() {
 	var user = cookieUtil.getCookieValue("userlogin");
 //	alert(user)
 			if(user != ""){
-				$(".dl").replaceWith("<li class='noborder'><a href='#'>欢迎您："+user+"</a></li>");	
+				$(".dl").replaceWith("<li class='noborder'><a href='html/login.html'>欢迎您："+user+"</a></li>");	
 			}
 
 }

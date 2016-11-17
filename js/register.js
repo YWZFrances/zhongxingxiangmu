@@ -182,4 +182,25 @@ $(document).ready(function() {
 		}
 	})
 
+
+window.onload=function(){
+	var user = cookieUtil.getCookieValue("userlogin");
+//	alert(user)
+			if(user != ""){
+				$(".dl").replaceWith("<li class='noborder'><a href='login.html'>欢迎您："+user+"</a></li>");	
+			}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 })

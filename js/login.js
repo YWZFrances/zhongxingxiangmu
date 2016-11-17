@@ -57,41 +57,34 @@ $(document).ready(function() {
 		
 //		console.log(yonghuming)
 		var strCookie = document.cookie;
-		var yonghuming = $("#txt1").val()
+//		var yonghuming = $("#txt1").val()
 		
 //		var bucunzai = $.cookie("yonghuming")
 //		var bucunzai = cookieUtil.getCookieName(yonghuming)
-//		alert(bucunzai)
+//		console.log(bucunzai)
 //		if(bucunzai == undefined){
 //			alert("用户不存在")
 //		}
 //console.log(bucunzai)
 		var arrCookie = strCookie.split("; ");	
 		for(var i = 0; i < arrCookie.length; i++) {
-			var flag1 = false
-		var flag2 = false
-		var flag3 = false
 			var arr = arrCookie[i].split("=");
 //			console.log(arr)
 //alert(arr)
 			if(arr[0] == $("#txt1").val()) {
 				if(arr[1] == $("#txt2").val()  && $("#txt3").val() == $(".chuyanzhengma").text()) {
-					flag2 = true
+					
 				cookieUtil.setCookie("userlogin", yonghuming, 365,"/");
 					window.location.href="../index.html"
 
 				} 
 				if($("#txt3").val() != $(".chuyanzhengma").text()){
 					alert("请输入正确的验证码")
-				}else{
-					flag1 = true
 				}
 			}
 			if(arr[0] == $("#txt1").val()) {
 				if(arr[1] != $("#txt2").val()) {
 					alert("密码错误")
-				}else{
-					flag3 = true
 				}
 			}
 			
@@ -107,5 +100,25 @@ $(document).ready(function() {
 		
 
 	})
+
+
+
+window.onload=function(){
+	var user = cookieUtil.getCookieValue("userlogin");
+//	alert(user)
+			if(user != ""){
+				$(".dl").replaceWith("<li class='noborder'><a href='login.html'>欢迎您："+user+"</a></li>");	
+			}
+
+}
+
+
+
+
+
+
+
+
+
 
 })

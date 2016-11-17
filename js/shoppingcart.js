@@ -131,6 +131,12 @@ function changeValue(){
 	var total = price*num;
 	$(".xiaoji2").html(total);
 	$(".shuliang2span").html(num)
+	var imgSrc = $(".shangpinmingcheng2 img").attr("src")
+	var name = $(".shangpinmingcheng2").text()
+	var price = $(".chengjiaojia2").html()
+	var count = $(".shuliang2span").html()
+	var strShopping	= imgSrc+"&&"+name+"&&"+price+"&&"+count+"&&"+count*price
+		cookieUtil.setCookie("shopping",strShopping,30)
 }
 function changeValuejian(){
 	var num = $(".shuliang2span").html()
@@ -142,11 +148,24 @@ function changeValuejian(){
 	var total = price*num;
 	$(".xiaoji2").html(total);
 	$(".shuliang2span").html(num)
+	var imgSrc = $(".shangpinmingcheng2 img").attr("src")
+	var name = $(".shangpinmingcheng2").text()
+	var price = $(".chengjiaojia2").html()
+	var count = $(".shuliang2span").html()
+	var strShopping	= imgSrc+"&&"+name+"&&"+price+"&&"+count+"&&"+count*price
+		cookieUtil.setCookie("shopping",strShopping,30)
 }
 			
 
 
+window.onload=function(){
+	var user = cookieUtil.getCookieValue("userlogin");
+//	alert(user)
+			if(user != ""){
+				$(".dl").replaceWith("<li class='noborder'><a href='login.html'>欢迎您："+user+"</a></li>");	
+			}
 
+}
 
 
 
