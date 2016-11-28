@@ -57,7 +57,7 @@ $(document).ready(function() {
 		
 //		console.log(yonghuming)
 		var strCookie = document.cookie;
-//		var yonghuming = $("#txt1").val()
+//		var yonghuming = $("#txt1").val()       
 		
 //		var bucunzai = $.cookie("yonghuming")
 //		var bucunzai = cookieUtil.getCookieName(yonghuming)
